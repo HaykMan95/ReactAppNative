@@ -11,20 +11,6 @@ import {
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 export default class MapScreen extends React.Component {
-  static navigationOptions = {
-    tabBarLabel: 'Map',
-    drawerIcon: ({tintColor}) => {
-      return (
-        <MaterialIcons
-          name="card-membership"
-          size={24}
-          style={{color: tintColor}}
-        >
-        </MaterialIcons>
-      );
-    }
-  }
-
   constructor(props) {
      super(props);
      this.state = {};
@@ -76,11 +62,6 @@ export default class MapScreen extends React.Component {
     return (
       <View style={styles.container}>
        {view}
-       <Button
-        style={styles.drawerBtn}
-        onPress={() => this.props.navigation.navigate('DrawerOpen')}
-        title="Open DrawNavigator"
-        />
       </View>
     );
   }
@@ -90,7 +71,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    top: 100,
+    top: 0,
   },
   map: {
     left: 0,
@@ -102,6 +83,6 @@ const styles = StyleSheet.create({
   drawerBtn: {
     position: 'absolute',
     left: 0,
-    top: 100,
+    top: 0,
   }
 });

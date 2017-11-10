@@ -11,20 +11,6 @@ import {
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 export default class SecondScreen extends React.Component {
-  static navigationOptions = {
-    tabBarLabel: 'Second',
-    drawerIcon: ({tintColor}) => {
-      return (
-        <MaterialIcons
-          name="change-history"
-          size={24}
-          style={{color: tintColor}}
-        >
-        </MaterialIcons>
-      );
-    }
-  }
-
   render() {
 
     return (
@@ -33,8 +19,7 @@ export default class SecondScreen extends React.Component {
           Second Screen
        </Text>
        <Button
-        style={styles.drawerBtn}
-        onPress={() => this.props.navigation.navigate('DrawerOpen')}
+        style={styles.drawerBtn}      
         title="Open DrawNavigator"
         />
       </View>
